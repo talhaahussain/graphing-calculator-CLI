@@ -1,6 +1,7 @@
 args = commandArgs(trailingOnly=TRUE)
 
-if (length(args) != 2) {
-    stop("ERROR - Incorrect number of arguments supplied.")
+if (length(args) == 0) {
+    stop("ERROR - Please supply arguments.")
 }
-print("YAY!")
+
+print(args)
