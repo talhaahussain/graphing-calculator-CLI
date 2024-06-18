@@ -8,4 +8,4 @@ def func(start, end, step, function):
 
 x, y = func(0, 10, 1, lambda x : math.sqrt(x))
 
-res = subprocess.call(f"Rscript ~/graphing-calculator-CLI/plot.R {x} {y}", shell=True)
+res = subprocess.call(f"Rscript ~/graphing-calculator-CLI/plot.R \"{x}\" \"{y}\"", shell=True)

@@ -1,7 +1,12 @@
-args = commandArgs(trailingOnly=TRUE)
+args <- commandArgs(trailingOnly=TRUE)
 
-if (length(args) == 0) {
-    stop("ERROR - Please supply arguments.")
+if (length(args) != 2) {
+    stop("ERROR - Incorrect number of arguments")
 }
 
-print(args)
+x = as.numeric(as.list(strsplit(gsub('^.|.$', '', args[1]), ", "))[[1]])
+
+y = as.numeric(as.list(strsplit(gsub('^.|.$', '', args[2]), ", "))[[1]])
+
+print(x)
+print(y)
